@@ -3,27 +3,29 @@
     padding-bottom: 60px;
     background: $bg-grey;
 
-    &__container {
-    display: flex;
-    align-items: baseline;
-    }
-
     &__logo {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    letter-spacing: 0.03em;
-    line-height: 1.19;
-    display: block;
-    margin-bottom: 20px;
-    color: $white;
+        margin-bottom: 20px;
+
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: 0.03em;
+        line-height: 1.17;
+        color: $white;
     }
 }
 
 .adress {
     font-style: normal;
-    width: 231px;
-    margin-right: 70px;
+}
+
+@media screen and (max-width: 1199px) {
+    .adress__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    }
 }
 
 .adress__street,
@@ -34,10 +36,18 @@
 }
 
 .adress__street {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     color: $white;
 }
 
+.adress__list {
+    @media screen and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
 .adress__link {
     color: $footer-contacts;
     transition-property: color;
@@ -51,6 +61,46 @@
 }
 
 .adress__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 }
 
+// -----------------------------TABLET STYLES-------------------
+@media screen and (min-width: 768px) {
+}
+
+// -----------------------------DESKTOP STYLES-------------------
+@media screen and (min-width: 1200px) {
+    .footer {
+        &__container {
+        display: flex;
+        align-items: baseline;
+        }
+
+        &__logo {
+        font-size: 26px;
+        line-height: 1.19;
+        }
+    }
+
+    .adress {
+        font-style: normal;
+        width: 231px;
+        margin-right: 70px;
+    }
+
+    .adress__street,
+    .contact-link-footer {
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
+
+    .adress__street {
+        margin-bottom: 9px;
+        color: $white;
+    }
+
+    .adress__item:not(:last-child) {
+        margin-bottom: 9px;
+    }    
+}

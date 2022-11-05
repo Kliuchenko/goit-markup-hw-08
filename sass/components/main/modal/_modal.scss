@@ -1,3 +1,4 @@
+
 .backdrop {
     position: fixed;
     width: 100vw;
@@ -13,7 +14,7 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     &__modal {
-        position: absolute;
+    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

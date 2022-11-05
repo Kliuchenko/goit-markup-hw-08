@@ -20,10 +20,17 @@
   <body>
     <!-- НАВІГАЦІЯ -->
     <header class="header">
-      <div class="header__container container">
+      <div class="header__container">
         <a lang="en" class="header__logo logo" href="./index.html">
           <span class="logo--web">Web</span>Studio
         </a>
+
+        <button class="menu-btn is-open" type="button" aria-expanded="false" data-menu-button>
+          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+            <use class="icon-menu" href="./images/icons.svg#icon-menu-btn"></use>
+            <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
+          </svg>
+        </button>
         <nav class="header__navigation navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
@@ -135,7 +142,7 @@
           </div>
         </div>
       </section>
-      <!-- Особливості -->
+      <!-- Особливості  -->
       <section class="section advantages">
         <div class="container">
           <h2 class="visually-hidden">Особливості</h2>
@@ -193,9 +200,17 @@
           <h2 class="title">Чим ми займаємося</h2>
           <ul class="activity__list">
             <li class="activity__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/Desktop/img-1-desktop.jpg    1x,
+                    ./images/Desktop/img-1-desktop@2x.jpg 2x
+                  "
+                />
+              </picture>
               <img
                 class="activity__img"
-                src="./images/image1.jpg"
+                src="./images/Desktop/img-1-desktop.jpg"
                 alt="Розробка програмного забеспечення"
                 width="370"
                 height="294"
@@ -205,9 +220,17 @@
               </div>
             </li>
             <li class="activity__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/Desktop/img-2-desktop.jpg    1x,
+                    ./images/Desktop/img-2-desktop@2x.jpg 2x
+                  "
+                />
+              </picture>
               <img
                 class="activity__img"
-                src="./images/img2.jpg"
+                src="./images/Desktop/img-2-desktop.jpg"
                 alt="Створення мобільних застосунків"
                 width="370"
                 height="294"
@@ -217,9 +240,17 @@
               </div>
             </li>
             <li class="activity__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/Desktop/img-3-desktop.jpg    1x,
+                    ./images/Desktop/img-3-desktop@2x.jpg 2x
+                  "
+                />
+              </picture>
               <img
                 class="activity__img"
-                src="./images/img3.jpg"
+                src="./images/Desktop/img-3-desktop.jpg"
                 alt="Розробка сучасного UX/UI дизайну"
                 width="370"
                 height="294"
@@ -239,7 +270,23 @@
           <h2 class="title">Наша команда</h2>
           <ul class="team__list">
             <li class="teammate">
-              <img src="./images/igor.jpg" alt="This is Igor" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="./images/Desktop/igor.jpg 1x, ./images/Desktop/igor@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/tablet/ihor-tablet.jpg 1x, ./images/tablet/ihor-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/mobile/ihor-mobile.jpg 1x, ./images/mobile/ihor-mobile@2x.jpg 2x"
+                  media="(min-width: 280px)"
+                />
+
+                <img class="teammate__img" src="./images/mobile/ihor-mobile.jpg" alt="Igor" />
+              </picture>
+
               <div class="teammate__descr">
                 <h3 class="teammate__name">Ігор Дем'яненко</h3>
                 <p class="teammate__career" lang="en">Product Designer</p>
@@ -276,7 +323,26 @@
               </div>
             </li>
             <li class="teammate">
-              <img src="./images/olga.jpg" alt="This is Olga" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="./images/Desktop/olga.jpg 1x, ./images/Desktop/olga@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/tablet/olha-tablet.jpg 1x, ./images/tablet/olha-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/mobile/olha-mobile.jpg 1x, ./images/mobile/olha-mobile@2x.jpg 2x"
+                  media="(min-width: 280px)"
+                />
+
+                <img
+                  class="teammate__img"
+                  src="./images/mobile/olha-mobile.jpg"
+                  alt="This is Olga"
+                />
+              </picture>
               <div class="teammate__descr">
                 <h3 class="teammate__name">Ольга Рєпіна</h3>
                 <p class="teammate__career" lang="en">Frontend Developer</p>
@@ -313,7 +379,32 @@
               </div>
             </li>
             <li class="teammate">
-              <img src="./images/mykola.jpg" alt="This is Mykola" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="./images/Desktop/mykola.jpg 1x, ./images/Desktop/mykola@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/mykola-tablet.jpg    1x,
+                    ./images/tablet/mykola-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/mykola-mobile.jpg    1x,
+                    ./images/mobile/mykola-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 280px)"
+                />
+
+                <img
+                  class="teammate__img"
+                  src="./images/mobile/mykola-mobile.jpg"
+                  alt="This is Mykola"
+                />
+              </picture>
               <div class="teammate__descr">
                 <h3 class="teammate__name">Микола Тарасов</h3>
                 <p class="teammate__career" lang="en">Marketing</p>
@@ -350,7 +441,32 @@
               </div>
             </li>
             <li class="teammate">
-              <img src="./images/myhailo.jpg" alt="This is Myhailo" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="./images/Desktop/mykhailo.jpg 1x, ./images/Desktop/mykhailo@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/mykhailo-tablet.jpg    1x,
+                    ./images/tablet/mykhailo-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/mykhailo-mobile.jpg    1x,
+                    ./images/mobile/mykhailo-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 280px)"
+                />
+
+                <img
+                  class="teammate__img"
+                  src="./images/mobile/mykhailo-mobile.jpg"
+                  alt="This is Mykhailo"
+                />
+              </picture>
               <div class="teammate__descr">
                 <h3 class="teammate__name">Михайло Єрмаков</h3>
                 <p class="teammate__career" lang="en">UI Designer</p>
@@ -444,7 +560,7 @@
     <!-- Контакти -->
     <footer class="footer">
       <div class="footer__container container">
-        <div>
+        <div class="adress__container">
           <a lang="en" class="footer__logo" href="./index.html">
             <span class="logo--web">Web</span>Studio</a
           >
@@ -525,5 +641,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <!-- <script src="./js/menu.js"></script> -->
   </body>
 </html>
