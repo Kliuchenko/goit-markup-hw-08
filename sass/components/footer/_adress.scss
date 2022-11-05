@@ -65,7 +65,13 @@
 }
 
 // -----------------------------TABLET STYLES-------------------
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .footer__container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
 // -----------------------------DESKTOP STYLES-------------------
