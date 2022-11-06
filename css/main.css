@@ -361,23 +361,31 @@ ul {
   .mobile-social__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
   }
 }
-@media screen and (max-width: 767px) and (max-width: 430px) {
+@media screen and (max-width: 767px) and (max-width: 437px) {
   .mobile-social__list {
     gap: 5px;
   }
 }
 @media screen and (max-width: 767px) {
   .mobile-social__item:not(:last-child) {
-    padding-right: 10px;
+    position: relative;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mobile-social__item:not(:last-child)::after {
+    position: absolute;
+    right: -10px;
+    content: "";
+    height: 100%;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
 }
-@media screen and (max-width: 767px) and (max-width: 430px) {
-  .mobile-social__item:not(:last-child) {
-    padding-right: 5px;
+@media screen and (max-width: 767px) and (max-width: 437px) {
+  .mobile-social__item:not(:last-child)::after {
+    right: -2.5px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -391,12 +399,12 @@ ul {
     color: #2196F3;
   }
 }
-@media screen and (max-width: 767px) and (max-width: 430px) {
+@media screen and (max-width: 767px) and (max-width: 437px) {
   .mobile-social__link {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .mobile-menu__btn {
     display: none;
   }
@@ -789,6 +797,10 @@ ul {
   background-color: rgb(245, 244, 250);
 }
 
+.advantages__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .advantages__title {
   margin-bottom: 10px;
   color: #212121;
@@ -806,9 +818,6 @@ ul {
   letter-spacing: 0.03em;
   color: #757575;
 }
-.advantages__descr:not(:last-child) {
-  margin-bottom: 30px;
-}
 
 @media screen and (min-width: 768px) {
   .advantages__list {
@@ -817,7 +826,7 @@ ul {
     gap: 30px;
   }
   .advantages__item {
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -897,13 +906,12 @@ ul {
 }
 
 .teammate {
-  padding-bottom: 24px;
   max-width: 450px;
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .teammate:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -911,10 +919,9 @@ ul {
 .teammate__img {
   width: 100%;
 }
-@media screen and (max-width: 1199px) {
-  .teammate__img {
-    margin-bottom: 30px;
-  }
+.teammate__descr {
+  padding-top: 30px;
+  padding-bottom: 24px;
 }
 
 .teammate__name,
@@ -949,7 +956,7 @@ ul {
 }
 @media screen and (min-width: 768px) {
   .teammate {
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1137,6 +1144,8 @@ ul {
   .adress {
     font-style: normal;
     width: 231px;
+  }
+  .adress__container {
     margin-right: 70px;
   }
   .adress__street,

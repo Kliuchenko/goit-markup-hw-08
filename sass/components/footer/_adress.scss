@@ -91,7 +91,10 @@
     .adress {
         font-style: normal;
         width: 231px;
-        margin-right: 70px;
+      
+        &__container {
+            margin-right: 70px;  
+        }
     }
 
     .adress__street,
